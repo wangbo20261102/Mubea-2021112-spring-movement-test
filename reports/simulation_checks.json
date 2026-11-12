@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "updated sequence",
+    "exact XYZ endpoints",
+    "continuous phase boundaries",
+    "robot max 30 mm/s, cylinder max 1 mm/s",
+    "1 s arrival dwell",
+    "0..50 mm cylinder range",
+    "constant captured hardware orientation",
+    "no locked joints",
+    "final A and cylinder zero"
+  ],
+  "limitation": "Geometric simulation only. No IK, solved joint trajectory, link geometry, collisions or real homing."
+}

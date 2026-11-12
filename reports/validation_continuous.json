@@ -1,0 +1,21 @@
+{
+  "mode": "offline_only",
+  "hardware_connected": false,
+  "motion_commands_sent": false,
+  "results": [
+    {
+      "target": "module",
+      "tests": 21,
+      "success": true,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "target": "single_file",
+      "tests": 21,
+      "success": true,
+      "failures": 0,
+      "errors": 0
+    }
+  ]
+}

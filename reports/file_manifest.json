@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-12",
+  "standalone_reproducible": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "bytes": 19
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "aa72855924f93f6fef3cc613d1219f5bfd0474c503c5e148784888d6d6468afa",
+      "bytes": 88
+    },
+    {
+      "path": "ag_run.py",
+      "sha256": "c0d92b0bbf137ff578fb33fe4e52481f1fac9a3c7d7f7dde7187ee7a132c48cf",
+      "bytes": 37672
+    },
+    {
+      "path": "ag_trial.py",
+      "sha256": "62f691a956123d608c15bc9ec2ba901b763aa314450fe21ce0a0d453f60f3cae",
+      "bytes": 25805
+    },
+    {
+      "path": "data/fixed_orientation_snapshot.json",
+      "sha256": "01431bca1b3e5510c73df4836e77b2463d083f02810a323974da8b16ff25f869",
+      "bytes": 379
+    },
+    {
+      "path": "data/task_config.json",
+      "sha256": "8920e4bdeb2b40a8a7773eb757856b74fd729bad693502321a9863cf2dbb2010",
+      "bytes": 1564
+    },
+    {
+      "path": "docs/电缸协议原始研究记录.md",
+      "sha256": "e0a6db9b00acfde5e56bd37b8939d5550f3440c508a6e65af07d1eb0c249c9b1",
+      "bytes": 4263
+    },
+    {
+      "path": "docs/研究记录.md",
+      "sha256": "7db667912d185329ef6ab14e02980a965aa142bcf4666f8b55cc1bf903543699",
+      "bytes": 7462
+    },
+    {
+      "path": "docs/设备与通信.md",
+      "sha256": "e7c0667b12a775ca58bcc8911dcf951668784a38b09f0814197d7ec4fed90b36",
+      "bytes": 4386
+    },
+    {
+      "path": "docs/运行说明.md",
+      "sha256": "b7c84ba3167e7200d55854bd69d6d3ffce047c48acacde57c4ab72573a0722c1",
+      "bytes": 3035
+    },
+    {
+      "path": "docs/问题与修复.md",
+      "sha256": "d873f535b5a2b742d8e042b650248b929e060e8aab82f47418f062ae3c923281",
+      "bytes": 2572
+    },
+    {
+      "path": "docs/验证记录.md",
+      "sha256": "beab3f9628f1ba71a1ec6d3feb7e2f8afc7203156a4b66f86005025f3905c4af",
+      "bytes": 3095
+    },
+    {
+      "path": "mcea_direction_test.py",
+      "sha256": "ab73b8ab28263a5474000774ef04c77615a89d58f0ce098cde7ecb1ce632fb6d",
+      "bytes": 12949
+    },
+    {
+      "path": "mcea_read.py",
+      "sha256": "1dbdcbdd562f567083c20750872a535b35e76c3174c90a25ece118a444f1c112",
+      "bytes": 7577
+    },
+    {
+      "path": "README.md",
+      "sha256": "b070a1aafd4de03d91b571d2163e75cdc2a01f0dd1d236c1ca5bc0eb57d04402",
+      "bytes": 3281
+    },
+    {
+      "path": "reports/hardware_success_summary.json",
+      "sha256": "745d1d908baad210a7f726c4d8a687e97dd297ce05d103eb4be83fdd512e9e22",
+      "bytes": 5950
+    },
+    {
+      "path": "reports/simulation_checks.json",
+      "sha256": "bf9555f4fcce9e7b3b255d0f6f9ae9d40cce01ddcb83834acc8ef99065b22615",
+      "bytes": 449
+    },
+    {
+      "path": "reports/simulation_plan.json",
+      "sha256": "8391a598cf99088bf5e9ac7499867eaecd0092007f6a2c6587c0c7f66d107dc9",
+      "bytes": 19084
+    },
+    {
+      "path": "reports/validation_continuous.json",
+      "sha256": "4d003f945004ab843b27242df550d530927773346df974441b3b90482b8b57b5",
+      "bytes": 356
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "bedbdaf956121ac02c9a1fd5c71d5f52f1958866d889149b7b29d040f05bd6a9",
+      "bytes": 29
+    },
+    {
+      "path": "run_offline_tests.py",
+      "sha256": "f19eed0b520bb5e443a5f6c835a8a0c95d7bb286c8f9df00d2e4b277fe11323c",
+      "bytes": 2047
+    },
+    {
+      "path": "simulate_ag.py",
+      "sha256": "912b7ba2f50bedabb8efa2e53f1761fc27fd86315474bc0f182157bd482e06e5",
+      "bytes": 10909
+    },
+    {
+      "path": "simulation_view.html",
+      "sha256": "54ffed6845b93bc4aeef2c40cb2eade8d095d9bd1e751cd06b2a5cfe54124e20",
+      "bytes": 6667
+    },
+    {
+      "path": "test_fixed_orientation.py",
+      "sha256": "4419c9abb8640f2f34de0ca09be75d7143accff8520b535964e42f3fa1eae6fa",
+      "bytes": 14939
+    },
+    {
+      "path": "tools/build_single_file.py",
+      "sha256": "2e8f6d1efb881d8bf21137e85001c8860a317ecfe795f6502d422c7a6d089634",
+      "bytes": 1872
+    }
+  ]
+}

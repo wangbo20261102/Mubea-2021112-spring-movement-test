@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "frame": "robot_base",
+  "point_unit": "mm",
+  "points": {
+    "A": [
+      -337.9,
+      -424.4,
+      382.0
+    ],
+    "B": [
+      -340.0,
+      -422.4,
+      443.0
+    ],
+    "C": [
+      -330.6,
+      -431.6,
+      445.1
+    ],
+    "D": [
+      70.5,
+      -436.3,
+      392.1
+    ],
+    "E": [
+      79.4,
+      -412.1,
+      216.7
+    ],
+    "F": [
+      93.3,
+      -456.2,
+      229.7
+    ],
+    "G": [
+      67.9,
+      -465.0,
+      410.0
+    ]
+  },
+  "robot_ip": "192.168.21.5",
+  "cylinder_port": "COM4",
+  "cylinder_baud": 115200,
+  "cylinder_id": 1,
+  "fixed_orientation_rad": [
+    1.4747881408617243,
+    -0.6236196873562871,
+    0.6049084354198352
+  ],
+  "orientation_captured_at": "2026-11-12T13:10:55.171401+08:00",
+  "robot_speed_mm_s": 30,
+  "robot_acceleration_mm_s2": 1,
+  "cylinder_speed_mm_s": 1,
+  "dwell_s": 1,
+  "joint6_locked": false,
+  "run_mode": "continuous_single_cycle",
+  "route": [
+    [
+      "robot",
+      "A"
+    ],
+    [
+      "robot",
+      "B"
+    ],
+    [
+      "cylinder",
+      48
+    ],
+    [
+      "robot",
+      "C"
+    ],
+    [
+      "cylinder",
+      13
+    ],
+    [
+      "robot",
+      "A"
+    ],
+    [
+      "robot",
+      "D"
+    ],
+    [
+      "robot",
+      "E"
+    ],
+    [
+      "cylinder",
+      48
+    ],
+    [
+      "robot",
+      "F"
+    ],
+    [
+      "robot",
+      "G"
+    ],
+    [
+      "cylinder",
+      0
+    ],
+    [
+      "robot",
+      "A"
+    ]
+  ],
+  "note": "Archive only; ag_run.py uses its embedded constants, not this JSON."
+}

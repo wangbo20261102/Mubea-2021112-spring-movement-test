@@ -1,0 +1,2 @@
+pyserial==3.5
+ur_rtde==1.6.5

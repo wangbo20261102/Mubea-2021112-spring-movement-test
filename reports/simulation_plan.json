@@ -1,0 +1,877 @@
+{
+  "mode": "offline_geometric_only",
+  "hardware_connections": false,
+  "units": "mm,s",
+  "points": {
+    "A": [
+      -337.9,
+      -424.4,
+      382.0
+    ],
+    "B": [
+      -340.0,
+      -422.4,
+      443.0
+    ],
+    "C": [
+      -330.6,
+      -431.6,
+      445.1
+    ],
+    "D": [
+      70.5,
+      -436.3,
+      392.1
+    ],
+    "E": [
+      79.4,
+      -412.1,
+      216.7
+    ],
+    "F": [
+      93.3,
+      -456.2,
+      229.7
+    ],
+    "G": [
+      67.9,
+      -465.0,
+      410.0
+    ]
+  },
+  "initial_xyz_mm": [
+    -337.9,
+    -424.4,
+    382.0
+  ],
+  "initial_cylinder_mm": 0,
+  "robot_max_speed_mm_s": 30.0,
+  "cylinder_max_speed_mm_s": 1.0,
+  "virtual_acceleration_mm_s2": 1.0,
+  "tool_axis_in_base": [
+    -0.013476970671436439,
+    -0.999907139719671,
+    0.0020206927394919583
+  ],
+  "orientation_frame": "robot_base",
+  "orientation_representation": "rotation_vector_rad",
+  "rotation_matrix": [
+    [
+      0.7061936829343256,
+      -0.7078904247446596,
+      -0.013476970671436439
+    ],
+    [
+      -0.008087507651501125,
+      0.01096832519635993,
+      -0.999907139719671
+    ],
+    [
+      0.7079725096383618,
+      0.7062371006943862,
+      0.0020206927394919583
+    ]
+  ],
+  "rotation_vector_rad": [
+    1.4747881408617243,
+    -0.6236196873562871,
+    0.6049084354198352
+  ],
+  "target_tcp_poses_m_rad": {
+    "A": [
+      -0.3379,
+      -0.4244,
+      0.382,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "B": [
+      -0.34,
+      -0.4224,
+      0.443,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "C": [
+      -0.3306,
+      -0.43160000000000004,
+      0.4451,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "D": [
+      0.0705,
+      -0.4363,
+      0.3921,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "E": [
+      0.07940000000000001,
+      -0.4121,
+      0.21669999999999998,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "F": [
+      0.0933,
+      -0.4562,
+      0.2297,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ],
+    "G": [
+      0.0679,
+      -0.465,
+      0.41,
+      1.4747881408617243,
+      -0.6236196873562871,
+      0.6049084354198352
+    ]
+  },
+  "orientation_heading_policy": "fixed full orientation captured from hardware",
+  "locked_joints": [],
+  "joint_trajectory_status": "not_solved",
+  "timing_is_geometric_estimate": true,
+  "orientation_is_hardware_calibrated": false,
+  "cylinder_positive": "down",
+  "cylinder_zero_is_virtual": true,
+  "tcp_and_cylinder_are_separate_coordinates": true,
+  "final_return_order": "retract cylinder to 0 at G, dwell, robot G to A, dwell",
+  "simulated_homing_search": false,
+  "simulated_ik_or_collision": false,
+  "total_duration_s": 369.28274879940335,
+  "phases": [
+    {
+      "index": 0,
+      "step": "1",
+      "label": "虚拟电缸已回零，位置0 mm",
+      "axis": "check",
+      "start_s": 0.0,
+      "duration_s": 0.0,
+      "end_s": 0.0,
+      "from_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "to_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 1,
+      "step": "1",
+      "label": "机械臂 → B",
+      "axis": "robot",
+      "start_s": 0.0,
+      "duration_s": 15.629318029873533,
+      "end_s": 15.629318029873533,
+      "from_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "to_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 61.068895519732465,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 2,
+      "step": "1",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 15.629318029873533,
+      "duration_s": 1.0,
+      "end_s": 16.62931802987353,
+      "from_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "to_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 3,
+      "step": "2",
+      "label": "电缸 → 48 mm",
+      "axis": "cylinder",
+      "start_s": 16.62931802987353,
+      "duration_s": 49.0,
+      "end_s": 65.62931802987353,
+      "from_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "to_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 48.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 4,
+      "step": "2",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 65.62931802987353,
+      "duration_s": 1.0,
+      "end_s": 66.62931802987353,
+      "from_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "to_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 5,
+      "step": "4",
+      "label": "机械臂 → C",
+      "axis": "robot",
+      "start_s": 66.62931802987353,
+      "duration_s": 7.299187496263254,
+      "end_s": 73.92850552613679,
+      "from_xyz_mm": [
+        -340.0,
+        -422.4,
+        443.0
+      ],
+      "to_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 13.319534526401458,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 6,
+      "step": "4",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 73.92850552613679,
+      "duration_s": 1.0,
+      "end_s": 74.92850552613679,
+      "from_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "to_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 7,
+      "step": "5",
+      "label": "电缸 → 13 mm",
+      "axis": "cylinder",
+      "start_s": 74.92850552613679,
+      "duration_s": 36.0,
+      "end_s": 110.92850552613679,
+      "from_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "to_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 35.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 8,
+      "step": "5",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 110.92850552613679,
+      "duration_s": 1.0,
+      "end_s": 111.92850552613679,
+      "from_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "to_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 9,
+      "step": "6",
+      "label": "机械臂 → A",
+      "axis": "robot",
+      "start_s": 111.92850552613679,
+      "duration_s": 15.990949354691173,
+      "end_s": 127.91945488082796,
+      "from_xyz_mm": [
+        -330.6,
+        -431.6,
+        445.1
+      ],
+      "to_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 63.9276153160745,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 10,
+      "step": "6",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 127.91945488082796,
+      "duration_s": 1.0,
+      "end_s": 128.91945488082797,
+      "from_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "to_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 11,
+      "step": "7",
+      "label": "机械臂 → D",
+      "axis": "robot",
+      "start_s": 128.91945488082797,
+      "duration_s": 40.4325686878809,
+      "end_s": 169.3520235687089,
+      "from_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "to_xyz_mm": [
+        70.5,
+        -436.3,
+        392.1
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 408.69815267505186,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 12,
+      "step": "7",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 169.3520235687089,
+      "duration_s": 1.0,
+      "end_s": 170.3520235687089,
+      "from_xyz_mm": [
+        70.5,
+        -436.3,
+        392.1
+      ],
+      "to_xyz_mm": [
+        70.5,
+        -436.3,
+        392.1
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 13,
+      "step": "8",
+      "label": "机械臂 → E",
+      "axis": "robot",
+      "start_s": 170.3520235687089,
+      "duration_s": 26.629690900029612,
+      "end_s": 196.9817144687385,
+      "from_xyz_mm": [
+        70.5,
+        -436.3,
+        392.1
+      ],
+      "to_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 177.28510935778,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 14,
+      "step": "8",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 196.9817144687385,
+      "duration_s": 1.0,
+      "end_s": 197.9817144687385,
+      "from_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "to_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 13.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 15,
+      "step": "9",
+      "label": "电缸 → 48 mm",
+      "axis": "cylinder",
+      "start_s": 197.9817144687385,
+      "duration_s": 36.0,
+      "end_s": 233.9817144687385,
+      "from_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "to_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "from_cylinder_mm": 13.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 35.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 16,
+      "step": "9",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 233.9817144687385,
+      "duration_s": 1.0,
+      "end_s": 234.9817144687385,
+      "from_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "to_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 17,
+      "step": "10",
+      "label": "机械臂 → F",
+      "axis": "robot",
+      "start_s": 234.9817144687385,
+      "duration_s": 13.860944849680632,
+      "end_s": 248.84265931841912,
+      "from_xyz_mm": [
+        79.4,
+        -412.1,
+        216.7
+      ],
+      "to_xyz_mm": [
+        93.3,
+        -456.2,
+        229.7
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 48.03144803147201,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 18,
+      "step": "10",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 248.84265931841912,
+      "duration_s": 1.0,
+      "end_s": 249.84265931841912,
+      "from_xyz_mm": [
+        93.3,
+        -456.2,
+        229.7
+      ],
+      "to_xyz_mm": [
+        93.3,
+        -456.2,
+        229.7
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 19,
+      "step": "11",
+      "label": "机械臂 → G",
+      "axis": "robot",
+      "start_s": 249.84265931841912,
+      "duration_s": 27.00317527684041,
+      "end_s": 276.84583459525953,
+      "from_xyz_mm": [
+        93.3,
+        -456.2,
+        229.7
+      ],
+      "to_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 182.29286875794128,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 20,
+      "step": "11",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 276.84583459525953,
+      "duration_s": 1.0,
+      "end_s": 277.84583459525953,
+      "from_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "to_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 48.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 21,
+      "step": "12a",
+      "label": "电缸 → 0 mm",
+      "axis": "cylinder",
+      "start_s": 277.84583459525953,
+      "duration_s": 49.0,
+      "end_s": 326.84583459525953,
+      "from_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "to_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "from_cylinder_mm": 48.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 48.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 22,
+      "step": "12a",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 326.84583459525953,
+      "duration_s": 1.0,
+      "end_s": 327.84583459525953,
+      "from_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "to_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 23,
+      "step": "12b",
+      "label": "机械臂 → A",
+      "axis": "robot",
+      "start_s": 327.84583459525953,
+      "duration_s": 40.43691420414383,
+      "end_s": 368.28274879940335,
+      "from_xyz_mm": [
+        67.9,
+        -465.0,
+        410.0
+      ],
+      "to_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 408.7860075883224,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 30.0,
+      "virtual_acceleration_mm_s2": 1.0
+    },
+    {
+      "index": 24,
+      "step": "12b",
+      "label": "到位停顿1秒",
+      "axis": "dwell",
+      "start_s": 368.28274879940335,
+      "duration_s": 1.0,
+      "end_s": 369.28274879940335,
+      "from_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "to_xyz_mm": [
+        -337.9,
+        -424.4,
+        382.0
+      ],
+      "from_cylinder_mm": 0.0,
+      "to_cylinder_mm": 0.0,
+      "distance_mm": 0.0,
+      "rotation_vector_rad": [
+        1.4747881408617243,
+        -0.6236196873562871,
+        0.6049084354198352
+      ],
+      "max_speed_mm_s": 1.0,
+      "virtual_acceleration_mm_s2": 1.0
+    }
+  ]
+}

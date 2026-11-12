@@ -1,0 +1,16 @@
+{
+  "captured_at_beijing": "2026-11-12T13:10:55.171401+08:00",
+  "ip": "192.168.21.5",
+  "frame": "robot_base",
+  "representation": "rotation_vector",
+  "unit": "rad",
+  "Rx": 1.4747881408617243,
+  "Ry": -0.6236196873562871,
+  "Rz": 0.6049084354198352,
+  "orientation_rad": [
+    1.4747881408617243,
+    -0.6236196873562871,
+    0.6049084354198352
+  ],
+  "commands_sent": false
+}

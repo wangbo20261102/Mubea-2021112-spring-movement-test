@@ -1,0 +1,77 @@
+<div id="ag-sim-v1">
+  <style>
+    #ag-sim-v1 {color:var(--foreground);display:grid;gap:calc(var(--font-size-base, 14px)*.8)}
+    #ag-sim-v1 svg {width:100%;height:360px;overflow:visible}
+    #ag-sim-v1 .ag-path {fill:none;stroke:var(--border);stroke-width:1.5}
+    #ag-sim-v1 .ag-active {fill:none;stroke:var(--viz-series-1);stroke-width:3}
+    #ag-sim-v1 .ag-point {fill:var(--background);stroke:var(--foreground);stroke-width:1.5}
+    #ag-sim-v1 .ag-tool {stroke:var(--viz-series-1);stroke-width:4}
+    #ag-sim-v1 .ag-cylinder {fill:var(--viz-series-2)}
+    #ag-sim-v1 svg text {fill:var(--foreground);font-family:inherit;font-size:13px}
+    #ag-sim-v1 #ag-stage {min-height:2.5em}
+  </style>
+  <div class="viz-controls">
+    <button type="button" class="btn btn-primary" id="ag-play">播放模拟</button>
+    <label class="form-label">播放倍率 <select class="form-select" id="ag-rate"><option value="1">1×</option><option value="10">10×</option><option value="30" selected>30×</option><option value="100">100×</option></select></label>
+    <span class="text-small">离线 · 机械臂30 mm/s · 电缸1 mm/s · 保持读取姿态</span>
+  </div>
+  <svg role="img" aria-label="底座坐标系中的A至G点TCP路径，姿态保持读取值；右侧为电缸位置。不包含机械臂连杆。" id="ag-scene"></svg>
+  <label class="form-label" for="ag-time">模拟进度 <span id="ag-clock" class="tabular-nums"></span></label>
+  <input class="form-range" id="ag-time" type="range" min="0" step="0.1" value="0" aria-label="模拟时间">
+  <div id="ag-stage" aria-live="polite"></div>
+  <div id="ag-values" class="tabular-nums text-small"></div>
+  <div class="text-small text-muted">无关节锁定。姿态使用硬件读取值；电缸仍按向下为正单独显示。关节可达性未验证，时间为几何估算。</div>
+</div>
+<script>
+(() => {
+  const root=document.getElementById('ag-sim-v1');
+  const plan=/*PLAN_DATA*/{};
+  const $=id=>root.querySelector('#'+id);
+  if(!plan.phases){$('ag-stage').textContent='请运行 simulate_ag.py 生成模拟数据。';return;}
+  const svg=$('ag-scene'), slider=$('ag-time'), play=$('ag-play'), rate=$('ag-rate');
+  const ns='http://www.w3.org/2000/svg';
+  let t=0,running=false,previous=0,lastLabel='';
+  slider.max=plan.total_duration_s;
+  function el(tag,attrs,parent=svg){const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);parent.append(n);return n;}
+  function txt(x,y,s,parent=svg){const n=el('text',{x,y},parent);n.textContent=s;return n;}
+  function profile(p,e){const d=p.distance_mm;if(!d)return 1;const a=p.virtual_acceleration_mm_s2,v=p.max_speed_mm_s,r=Math.min(v/a,Math.sqrt(d/a)),c=Math.max(0,(d-a*r*r)/(a*r)),T=2*r+c;const u=Math.max(0,Math.min(T,e));return (u<=r?.5*a*u*u:u<=r+c?.5*a*r*r+a*r*(u-r):d-.5*a*(T-u)**2)/d;}
+  function state(){const p=plan.phases.find(p=>p.end_s>t)||plan.phases.at(-1);const f=profile(p,t-p.start_s);return {p,xyz:p.from_xyz_mm.map((a,i)=>a+(p.to_xyz_mm[i]-a)*f),c:p.from_cylinder_mm+(p.to_cylinder_mm-p.from_cylinder_mm)*f};}
+  function render(){
+    const s=state(),w=Math.max(300,root.clientWidth),h=360;
+    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren();
+    const plotW=w-94, scale=Math.min((plotW-48)/465,270/285);
+    const proj=([x,y,z])=>[26+(x+360+.45*(y+440))*scale,300-(z-190-.3*(y+440))*scale];
+    const line=(a,b,cls)=>{const p=proj(a),q=proj(b);el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],class:cls});};
+    txt(8,18,'TCP路径 · 底座坐标系');
+    for(const p of plan.phases.filter(p=>p.axis==='robot'))line(p.from_xyz_mm,p.to_xyz_mm,'ag-path');
+    const shift={A:[-20,18],B:[-17,3],C:[5,-12],D:[6,-7],E:[-23,20],F:[8,15],G:[8,-9]};
+    for(const [name,p] of Object.entries(plan.points)){const [x,y]=proj(p);el('circle',{cx:x,cy:y,r:3.5,class:'ag-point'});txt(x+shift[name][0],y+shift[name][1],name);}
+    if(s.p.axis==='robot')line(s.p.from_xyz_mm,s.p.to_xyz_mm,'ag-active');
+    const [x,y]=proj(s.xyz);el('line',{x1:x,y1:y,x2:x,y2:y-28,class:'ag-tool'});
+    el('polygon',{points:`${x-5},${y-20} ${x+5},${y-20} ${x},${y-30}`,fill:'var(--viz-series-1)'});
+    el('circle',{cx:x,cy:y,r:4,fill:'var(--viz-series-1)'});
+    const ox=38,oy=331;el('line',{x1:ox,y1:oy,x2:ox+34,y2:oy,stroke:'var(--border)'});txt(ox+38,oy+4,'X');
+    el('line',{x1:ox,y1:oy,x2:ox,y2:oy-27,stroke:'var(--border)'});txt(ox-4,oy-33,'Z');
+    el('line',{x1:ox,y1:oy,x2:ox+18,y2:oy+12,stroke:'var(--border)'});txt(ox+23,oy+18,'Y');
+    const cx=w-65, top=66;txt(cx-14,28,'电缸');txt(cx-14,46,'向下为正');
+    el('rect',{x:cx,y:top,width:14,height:200,fill:'var(--muted)'});
+    el('rect',{x:cx+3,y:top,width:8,height:s.c*4,class:'ag-cylinder'});
+    el('line',{x1:cx-5,y1:top+s.c*4,x2:cx+20,y2:top+s.c*4,stroke:'var(--viz-series-2)','stroke-width':3});
+    for(const p of [0,13,48,50]){txt(cx+23,top+p*4+(p===48?-6: p===50?10:4),String(p));}
+    txt(cx-12,301,s.c.toFixed(2));txt(cx-12,319,'mm');
+    const fmt=n=>`${Math.floor(n/60)}:${String(Math.floor(n%60)).padStart(2,'0')}`;
+    $('ag-clock').textContent=`${fmt(t)} / ${fmt(plan.total_duration_s)}`;
+    slider.value=t;
+    const label=`步骤 ${s.p.step} · ${s.p.label}`;
+    if(label!==lastLabel){$('ag-stage').textContent=label;lastLabel=label;}
+    $('ag-values').textContent=`TCP X ${s.xyz[0].toFixed(2)} · Y ${s.xyz[1].toFixed(2)} · Z ${s.xyz[2].toFixed(2)} mm · Rx 1.474788 · Ry -0.623620 · Rz 0.604908 rad`;
+  }
+  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{simulation_time_s:t,step:state().p.step},privateContent:{rate:rate.value}}).catch(()=>{});}
+  function restore(v){const a=v?.modelContent?.simulation_time_s;if(Number.isFinite(a))t=Math.max(0,Math.min(plan.total_duration_s,a));const r=v?.privateContent?.rate;if(['1','10','30','100'].includes(r))rate.value=r;render();}
+  play.onclick=()=>{if(t>=plan.total_duration_s)t=0;running=!running;play.textContent=running?'暂停':'播放模拟';previous=0;save();};
+  slider.oninput=()=>{t=Number(slider.value);running=false;play.textContent='播放模拟';render();};slider.onchange=save;rate.onchange=save;
+  function tick(now){if(running){if(previous)t=Math.min(plan.total_duration_s,t+(now-previous)/1000*Number(rate.value));render();if(t>=plan.total_duration_s){running=false;play.textContent='重新播放';save();}}previous=now;requestAnimationFrame(tick);}
+  window.addEventListener('openai:set_globals',e=>{if(e.detail?.globals?.widgetState)restore(e.detail.globals.widgetState);});
+  new ResizeObserver(render).observe(root);restore(window.openai?.widgetState);requestAnimationFrame(tick);
+})();
+</script>

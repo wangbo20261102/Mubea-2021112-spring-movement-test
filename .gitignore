@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+logs/
+simulation_output/
+.env
+.env.*
+*.zip
+.vscode/
