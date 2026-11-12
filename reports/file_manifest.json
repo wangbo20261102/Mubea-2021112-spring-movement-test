@@ -13,14 +13,19 @@
       "bytes": 88
     },
     {
+      "path": "README.md",
+      "sha256": "896b05cca8792a79e50d0b127dffa40341cbba2cd6dd287a7eb8c915345da0c1",
+      "bytes": 3594
+    },
+    {
       "path": "ag_run.py",
-      "sha256": "c0d92b0bbf137ff578fb33fe4e52481f1fac9a3c7d7f7dde7187ee7a132c48cf",
-      "bytes": 37672
+      "sha256": "9edaa73278b4f336717f85927428fed4ca2db7d331f8817518dbc8ebc01494b9",
+      "bytes": 131396
     },
     {
       "path": "ag_trial.py",
-      "sha256": "62f691a956123d608c15bc9ec2ba901b763aa314450fe21ce0a0d453f60f3cae",
-      "bytes": 25805
+      "sha256": "acafbe23d8e98c95d141bc7704120dfd1f8738d094f4358de4162ef64c41b3fd",
+      "bytes": 85412
     },
     {
       "path": "data/fixed_orientation_snapshot.json",
@@ -58,24 +63,29 @@
       "bytes": 2572
     },
     {
+      "path": "docs/零基础代码阅读指南.md",
+      "sha256": "3a35bce3fa53986c69020d3b731007bf75605fab80d017403f8af97858aeda94",
+      "bytes": 6897
+    },
+    {
       "path": "docs/验证记录.md",
-      "sha256": "beab3f9628f1ba71a1ec6d3feb7e2f8afc7203156a4b66f86005025f3905c4af",
-      "bytes": 3095
+      "sha256": "1e8fd5d596313c0a8f00f4c70731bba5b7b3eb7ca3a4546ee92ba453735f5026",
+      "bytes": 3669
     },
     {
       "path": "mcea_direction_test.py",
-      "sha256": "ab73b8ab28263a5474000774ef04c77615a89d58f0ce098cde7ecb1ce632fb6d",
-      "bytes": 12949
+      "sha256": "50283deda2ff4a48e778dbec0701a9ac8e205371fceb0eba738227c959169ced",
+      "bytes": 41568
     },
     {
       "path": "mcea_read.py",
-      "sha256": "1dbdcbdd562f567083c20750872a535b35e76c3174c90a25ece118a444f1c112",
-      "bytes": 7577
+      "sha256": "d15ee39330084c859bfb78a6e1fd6650b98703b76f89b820a885cf336ffbc0c8",
+      "bytes": 26972
     },
     {
-      "path": "README.md",
-      "sha256": "b070a1aafd4de03d91b571d2163e75cdc2a01f0dd1d236c1ca5bc0eb57d04402",
-      "bytes": 3281
+      "path": "reports/comment_validation.json",
+      "sha256": "1e1a1ff59dc0c8fd99cde667d55883905a49ac0d4836a4aadccaa64a7a5d68d1",
+      "bytes": 2656
     },
     {
       "path": "reports/hardware_success_summary.json",
@@ -104,13 +114,13 @@
     },
     {
       "path": "run_offline_tests.py",
-      "sha256": "f19eed0b520bb5e443a5f6c835a8a0c95d7bb286c8f9df00d2e4b277fe11323c",
-      "bytes": 2047
+      "sha256": "d8e0769e181705c509504b849581990ebb5eea65e9def87489ce913f9d01c031",
+      "bytes": 7128
     },
     {
       "path": "simulate_ag.py",
-      "sha256": "912b7ba2f50bedabb8efa2e53f1761fc27fd86315474bc0f182157bd482e06e5",
-      "bytes": 10909
+      "sha256": "23f7b277712372129838d8a7a78b61f2a602b95755bce2b19108a8ae3e61e64f",
+      "bytes": 31647
     },
     {
       "path": "simulation_view.html",
@@ -119,13 +129,13 @@
     },
     {
       "path": "test_fixed_orientation.py",
-      "sha256": "4419c9abb8640f2f34de0ca09be75d7143accff8520b535964e42f3fa1eae6fa",
-      "bytes": 14939
+      "sha256": "85d4f3a1a4217d7b15a9f0f0ff27a2c7c28f56cef6b529c6714a37ff38b11778",
+      "bytes": 48918
     },
     {
       "path": "tools/build_single_file.py",
-      "sha256": "2e8f6d1efb881d8bf21137e85001c8860a317ecfe795f6502d422c7a6d089634",
-      "bytes": 1872
+      "sha256": "c34f19caccf2571e9106f2b85a1a218534db97f54292d22aecb6b5bcc2857f76",
+      "bytes": 8498
     }
   ]
 }

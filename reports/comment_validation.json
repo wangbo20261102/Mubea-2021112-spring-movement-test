@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-12",
+  "baseline_commit": "408b9d16d87435781071b66464db9e73d7a45564",
+  "hardware_connected": false,
+  "motion_commands_sent": false,
+  "python_files": 8,
+  "annotated_code_lines": 2124,
+  "unannotated_code_lines": 0,
+  "runtime_and_test_ast_unchanged": true,
+  "commented_standalone_reproducible": true,
+  "files": [
+    {
+      "file": "ag_run.py",
+      "code_lines": 766,
+      "annotated_code_lines": 766,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "ag_trial.py",
+      "code_lines": 483,
+      "annotated_code_lines": 483,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "mcea_direction_test.py",
+      "code_lines": 241,
+      "annotated_code_lines": 241,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "mcea_read.py",
+      "code_lines": 163,
+      "annotated_code_lines": 163,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "run_offline_tests.py",
+      "code_lines": 43,
+      "annotated_code_lines": 43,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "simulate_ag.py",
+      "code_lines": 174,
+      "annotated_code_lines": 174,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "test_fixed_orientation.py",
+      "code_lines": 213,
+      "annotated_code_lines": 213,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": true,
+      "change_note": "Comments only"
+    },
+    {
+      "file": "tools/build_single_file.py",
+      "code_lines": 41,
+      "annotated_code_lines": 41,
+      "unannotated_code_lines": 0,
+      "multiline_string_content_preserved": true,
+      "ast_identical_to_previous_release": false,
+      "change_note": "Preserve original source and learning comments when rebuilding; generated runner AST unchanged"
+    }
+  ]
+}
